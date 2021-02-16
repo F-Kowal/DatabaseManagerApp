@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseManagerApp", "DatabaseManagerApp\DatabaseManagerApp.csproj", "{50537E0D-0534-42A3-82E0-54562563DFFA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50537E0D-0534-42A3-82E0-54562563DFFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50537E0D-0534-42A3-82E0-54562563DFFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50537E0D-0534-42A3-82E0-54562563DFFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50537E0D-0534-42A3-82E0-54562563DFFA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {54EA8D8C-0D25-4392-BDBB-CBEAE5D6E742}
+	EndGlobalSection
+EndGlobal
