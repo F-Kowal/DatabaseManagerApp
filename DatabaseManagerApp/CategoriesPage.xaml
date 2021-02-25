@@ -1,0 +1,111 @@
+﻿<Page x:Class="DatabaseManagerApp.CategoriesPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DatabaseManagerApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="950"
+      Title="CategoriesPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Foreground="#ddd" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Categories"/>
+        <DataGrid Grid.Row="1" Background="#444" AutoGenerateColumns="False" Margin="5" Name="CategoriesDG" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Category Id" Binding="{Binding CategoryId}" Foreground="#333"/>
+                <DataGridTextColumn Header="Category Name" Binding="{Binding CategoryName}" Foreground="#333"/>
+                <DataGridTextColumn Header="Description" Binding="{Binding Description}" Foreground="#333"/>
+
+                <DataGridTemplateColumn Header="Update category">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Edit" Click="UpdateCategoryForEdit"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="Delete category">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Delete" Click="DeleteCategory"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="0" BorderBrush="#444" Margin="5" BorderThickness="1">
+                <StackPanel Margin="5" >
+                    <Label Content="Add new category" Foreground="#ddd" FontWeight="Bold" Margin="0 10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                    <Grid Margin="5" x:Name="AddNewCategoryGrid">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <Label Grid.Row="0" Grid.Column="0" Foreground="#ddd" Content="Name"/>
+                        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding CategoryName}"/>
+
+                        <Label Grid.Row="1" Grid.Column="0" Foreground="#ddd" Content="Description"/>
+                        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Description}"/>
+
+                        <Button Grid.Row="4" Grid.ColumnSpan="2" Background="#444" Foreground="#ddd" Margin="0 10" Content="Add" Click="AddCategory"/>
+                    </Grid>
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Column="1" BorderBrush="#444" Margin="5" BorderThickness="1">
+                <StackPanel Margin="5" >
+                    <Label Content="Update category" Foreground="#ddd" FontWeight="Bold" Margin="0 10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                    <Grid Margin="5" x:Name="UpdateCategoryGrid">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <Label Grid.Row="0" Grid.Column="0" Foreground="#ddd" Content="Name"/>
+                        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding CategoryName}"/>
+
+                        <Label Grid.Row="1" Grid.Column="0" Foreground="#ddd" Content="Description"/>
+                        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Description}"/>
+
+                        <Button Grid.Row="4" Grid.ColumnSpan="2" Background="#444" Foreground="#ddd" Margin="0 10" Content="Update" Click="UpdateCategory"/>
+                    </Grid>
+                </StackPanel>
+            </Border>
+
+
+        </Grid>
+    </Grid>
+</Page>

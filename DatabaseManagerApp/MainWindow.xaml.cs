@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace DatabaseManagerApp
 {
@@ -20,9 +21,46 @@ namespace DatabaseManagerApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        NorthwindContext context = new NorthwindContext();
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = this;
+        }
+
+        CategoriesPage categoriesPage;
+        private void ButtonClickCategories(object sender, RoutedEventArgs e)
+        {
+            if (categoriesPage == null)
+            {
+                categoriesPage = new CategoriesPage(context);
+            }
+            Main.Content = categoriesPage;
+        }
+
+        CustomersPage customersPage;
+        private void ButtonClickCustomers(object sender, RoutedEventArgs e)
+        {
+            if (customersPage == null)
+            {
+                customersPage = new CustomersPage(context);
+            }
+            Main.Content = customersPage;
+        }
+
+        private void ButtonClickEmployees(object sender, RoutedEventArgs e)
+        {
+            //Main.Content = new EmployeesPage();
+        }
+
+        private void ButtonClickOrders(object sender, RoutedEventArgs e)
+        {
+            //Main.Content = new OrdersPage();
+        }
+
+        private void ButtonClickProducts(object sender, RoutedEventArgs e)
+        {
+            //Main.Content = new ProductsPage();
         }
     }
 }

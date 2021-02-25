@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DatabaseManagerApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+        Title="MainWindow" Height="700" Width="1020" MinHeight="600" MinWidth="1020">
+    <Grid Background="#333">
+        <StackPanel Orientation="Vertical" Width="70"  VerticalAlignment="Top" HorizontalAlignment="Left">
+            <Label Content="Tables:" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="#ddd" FontSize="14"/>
+            <Button Content="Categories" Background="#333" Foreground="#ddd" Click="ButtonClickCategories"/>
+            <Button Content="Customers" Background="#333" Foreground="#ddd" Click="ButtonClickCustomers"/>
+            <Button Content="Employees" Background="#333" Foreground="#ddd" Click="ButtonClickEmployees"/>
+            <Button Content="Orders" Background="#333" Foreground="#ddd" Click="ButtonClickOrders"/>
+            <Button Content="Products" Background="#333" Foreground="#ddd" Click="ButtonClickProducts"/>
+        </StackPanel>
+        <Frame x:Name="Main" Margin="70,0,0,0" Background="#222"/>
     </Grid>
 </Window>

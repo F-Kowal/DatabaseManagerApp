@@ -1,0 +1,178 @@
+﻿<Page x:Class="DatabaseManagerApp.CustomersPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DatabaseManagerApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="950"
+      Title="CustomersPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Foreground="#ddd" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Customers"/>
+        <DataGrid Grid.Row="1" Background="#444" AutoGenerateColumns="False" Margin="5,5,5,117" Name="ElementsDG" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Customer Id" Binding="{Binding CustomerId}" Foreground="#333"/>
+                <DataGridTextColumn Header="Company Name" Binding="{Binding CompanyName}" Foreground="#333"/>
+                <DataGridTextColumn Header="Contact Name" Binding="{Binding ContactName}" Foreground="#333"/>
+                <DataGridTextColumn Header="Contact Title" Binding="{Binding ContactTitle}" Foreground="#333"/>
+                <DataGridTextColumn Header="Address" Binding="{Binding Address}" Foreground="#333"/>
+                <DataGridTextColumn Header="City" Binding="{Binding City}" Foreground="#333"/>
+                <DataGridTextColumn Header="Region" Binding="{Binding Region}" Foreground="#333"/>
+                <DataGridTextColumn Header="Postal Code" Binding="{Binding PostalCode}" Foreground="#333"/>
+                <DataGridTextColumn Header="Country" Binding="{Binding Country}" Foreground="#333"/>
+                <DataGridTextColumn Header="Phone" Binding="{Binding Phone}" Foreground="#333"/>
+                <DataGridTextColumn Header="Fax" Binding="{Binding Fax}" Foreground="#333"/>
+                <DataGridTemplateColumn Header="Update Element">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Edit" Click="UpdateElementForEdit"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="Delete Element">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Delete" Click="DeleteElement"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Grid Grid.Row="1" Margin="0,203,0,0" Grid.RowSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="0" BorderBrush="#444" Margin="5" BorderThickness="1">
+                <StackPanel Margin="5" >
+                    <Label Content="Add new element" Foreground="#ddd" FontWeight="Bold" Margin="0 10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                    <Grid Margin="5" x:Name="AddNewElementGrid">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <Label Grid.Row="0" Grid.Column="0" Foreground="#ddd" Content="Name"/>
+                        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding CompanyName}"/>
+
+                        <Label Grid.Row="1" Grid.Column="0" Foreground="#ddd" Content="Contact name"/>
+                        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding ContactName}"/>
+                        
+                        <Label Grid.Row="2" Grid.Column="0" Foreground="#ddd" Content="Contact title"/>
+                        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding ContactTitle}"/>
+                        
+                        <Label Grid.Row="3" Grid.Column="0" Foreground="#ddd" Content="Address"/>
+                        <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding Address}"/>
+
+                        <Label Grid.Row="4" Grid.Column="0" Foreground="#ddd" Content="City"/>
+                        <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding City}"/>
+
+                        <Label Grid.Row="5" Grid.Column="0" Foreground="#ddd" Content="Region"/>
+                        <TextBox Grid.Row="5" Grid.Column="1" Text="{Binding Region}"/>
+
+                        <Label Grid.Row="6" Grid.Column="0" Foreground="#ddd" Content="Postal code"/>
+                        <TextBox Grid.Row="6" Grid.Column="1" Text="{Binding PostalCode}"/>
+
+                        <Label Grid.Row="7" Grid.Column="0" Foreground="#ddd" Content="Contry"/>
+                        <TextBox Grid.Row="7" Grid.Column="1" Text="{Binding Country}"/>
+
+                        <Label Grid.Row="8" Grid.Column="0" Foreground="#ddd" Content="Phone"/>
+                        <TextBox Grid.Row="8" Grid.Column="1" Text="{Binding Phone}"/>
+
+                        <Label Grid.Row="9" Grid.Column="0" Foreground="#ddd" Content="Fax"/>
+                        <TextBox Grid.Row="9" Grid.Column="1" Text="{Binding Fax}"/>
+
+                        <Button Grid.Row="11" Grid.ColumnSpan="2" Background="#444" Foreground="#ddd" Margin="0 10" Content="Add" Click="AddElement"/>
+                    </Grid>
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Column="1" BorderBrush="#444" Margin="5" BorderThickness="1">
+                <StackPanel Margin="5" >
+                    <Label Content="Update element" Foreground="#ddd" FontWeight="Bold" Margin="0 10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                    <Grid Margin="5" x:Name="UpdateElementGrid">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <Label Grid.Row="0" Grid.Column="0" Foreground="#ddd" Content="Name"/>
+                        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding CompanyName}"/>
+
+                        <Label Grid.Row="1" Grid.Column="0" Foreground="#ddd" Content="Contact name"/>
+                        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding ContactName}"/>
+
+                        <Label Grid.Row="2" Grid.Column="0" Foreground="#ddd" Content="Contact title"/>
+                        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding ContactTitle}"/>
+
+                        <Label Grid.Row="3" Grid.Column="0" Foreground="#ddd" Content="Address"/>
+                        <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding Address}"/>
+
+                        <Label Grid.Row="4" Grid.Column="0" Foreground="#ddd" Content="City"/>
+                        <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding City}"/>
+
+                        <Label Grid.Row="5" Grid.Column="0" Foreground="#ddd" Content="Region"/>
+                        <TextBox Grid.Row="5" Grid.Column="1" Text="{Binding Region}"/>
+
+                        <Label Grid.Row="6" Grid.Column="0" Foreground="#ddd" Content="Postal code"/>
+                        <TextBox Grid.Row="6" Grid.Column="1" Text="{Binding PostalCode}"/>
+
+                        <Label Grid.Row="7" Grid.Column="0" Foreground="#ddd" Content="Contry"/>
+                        <TextBox Grid.Row="7" Grid.Column="1" Text="{Binding Country}"/>
+
+                        <Label Grid.Row="8" Grid.Column="0" Foreground="#ddd" Content="Phone"/>
+                        <TextBox Grid.Row="8" Grid.Column="1" Text="{Binding Phone}"/>
+
+                        <Label Grid.Row="9" Grid.Column="0" Foreground="#ddd" Content="Fax"/>
+                        <TextBox Grid.Row="9" Grid.Column="1" Text="{Binding Fax}"/>
+
+                        <Button Grid.Row="11" Grid.ColumnSpan="2" Background="#444" Foreground="#ddd" Margin="0 10" Content="Update" Click="UpdateElement"/>
+                    </Grid>
+                </StackPanel>
+            </Border>
+
+
+        </Grid>
+    </Grid>
+</Page>
