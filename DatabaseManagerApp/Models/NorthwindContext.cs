@@ -119,10 +119,6 @@ namespace DatabaseManagerApp
 
                 entity.Property(e => e.Notes).HasColumnType("ntext");
 
-                entity.Property(e => e.Photo).HasColumnType("image");
-
-                entity.Property(e => e.PhotoPath).HasMaxLength(255);
-
                 entity.Property(e => e.PostalCode).HasMaxLength(10);
 
                 entity.Property(e => e.Region).HasMaxLength(15);

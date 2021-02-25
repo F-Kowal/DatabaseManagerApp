@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:DatabaseManagerApp"
       mc:Ignorable="d" 
-      d:DesignHeight="700" d:DesignWidth="950"
+      d:DesignHeight="800" d:DesignWidth="950"
       Title="CustomersPage">
 
     <Grid>
@@ -48,7 +48,7 @@
             </DataGrid.Columns>
         </DataGrid>
 
-        <Grid Grid.Row="1" Margin="0,203,0,0" Grid.RowSpan="2">
+        <Grid Grid.Row="1" Margin="0,258,0,0" Grid.RowSpan="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>

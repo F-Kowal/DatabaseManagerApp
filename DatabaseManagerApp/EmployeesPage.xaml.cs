@@ -15,56 +15,56 @@ using System.Windows.Shapes;
 namespace DatabaseManagerApp
 {
     /// <summary>
-    /// Interaction logic for CustomersPage.xaml
+    /// Interaction logic for EmployeesPage.xaml
     /// </summary>
-    public partial class CustomersPage : Page
+    public partial class EmployeesPage : Page
     {       
 
         NorthwindContext dbContext;
-        Customer NewCustomer = new Customer();
-        public CustomersPage(NorthwindContext dbContext)
+        Employee NewEmployee = new Employee();
+        public EmployeesPage(NorthwindContext dbContext)
         {
             this.dbContext = dbContext;
             InitializeComponent();
-            GetCustomers();
+            GetEmployees();
 
-            AddNewCustomerGrid.DataContext = NewCustomer;
+            AddNewEmployeeGrid.DataContext = NewEmployee;
         }
 
-        private void GetCustomers()
+        private void GetEmployees()
         {
-            CustomersDG.ItemsSource = dbContext.Customers.ToList();
+            EmployeesDG.ItemsSource = dbContext.Employees.ToList();
         }
 
-        private void AddCustomer(object s, RoutedEventArgs e)
+        private void AddEmployee(object s, RoutedEventArgs e)
         {
-            dbContext.Customers.Add(NewCustomer);
+            dbContext.Employees.Add(NewEmployee);
             dbContext.SaveChanges();
-            GetCustomers();
-            NewCustomer = new Customer();
-            AddNewCustomerGrid.DataContext = NewCustomer;
+            GetEmployees();
+            NewEmployee = new Employee();
+            AddNewEmployeeGrid.DataContext = NewEmployee;
         }
 
-        Customer selectedCustomer = new Customer();
-        private void UpdateCustomerForEdit(object s, RoutedEventArgs e)
+        Employee selectedEmployee = new Employee();
+        private void UpdateEmployeeForEdit(object s, RoutedEventArgs e)
         {
-            selectedCustomer = (s as FrameworkElement).DataContext as Customer;
-            UpdateCustomerGrid.DataContext = selectedCustomer;
+            selectedEmployee = (s as FrameworkElement).DataContext as Employee;
+            UpdateEmployeeGrid.DataContext = selectedEmployee;
         }
 
-        private void UpdateCustomer(object s, RoutedEventArgs e)
+        private void UpdateEmployee(object s, RoutedEventArgs e)
         {
-            dbContext.Update(selectedCustomer);
+            dbContext.Update(selectedEmployee);
             dbContext.SaveChanges();
-            GetCustomers();
+            GetEmployees();
         }
 
-        private void DeleteCustomer(object s, RoutedEventArgs e)
+        private void DeleteEmployee(object s, RoutedEventArgs e)
         {
-            var customerToBeDeleted = (s as FrameworkElement).DataContext as Customer;
-            dbContext.Customers.Remove(customerToBeDeleted);
+            var employeeToBeDeleted = (s as FrameworkElement).DataContext as Employee;
+            dbContext.Employees.Remove(employeeToBeDeleted);
             dbContext.SaveChanges();
-            GetCustomers();
+            GetEmployees();
         }
     }
 }
