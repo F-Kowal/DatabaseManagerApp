@@ -68,9 +68,14 @@ namespace DatabaseManagerApp
             Main.Content = ordersPage;
         }
 
+        ProductsPage productsPage;
         private void ButtonClickProducts(object sender, RoutedEventArgs e)
         {
-            //Main.Content = new ProductsPage();
+            if (productsPage == null)
+            {
+                productsPage = new ProductsPage(context);
+            }
+            Main.Content = productsPage;
         }
     }
 }
