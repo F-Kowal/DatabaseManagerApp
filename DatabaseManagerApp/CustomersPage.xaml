@@ -76,39 +76,43 @@
                             <RowDefinition/>
                             <RowDefinition/>
                             <RowDefinition/>
+                            <RowDefinition/>
                         </Grid.RowDefinitions>
 
-                        <Label Grid.Row="0" Grid.Column="0" Foreground="#ddd" Content="Name"/>
-                        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding CompanyName}"/>
-
-                        <Label Grid.Row="1" Grid.Column="0" Foreground="#ddd" Content="Contact name"/>
-                        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding ContactName}"/>
+                        <Label Grid.Row="0" Grid.Column="0" Foreground="#ddd" Content="Customer Id"/>
+                        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding CustomerId}"/>
                         
-                        <Label Grid.Row="2" Grid.Column="0" Foreground="#ddd" Content="Contact title"/>
-                        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding ContactTitle}"/>
+                        <Label Grid.Row="1" Grid.Column="0" Foreground="#ddd" Content="Name"/>
+                        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding CompanyName}"/>
+
+                        <Label Grid.Row="2" Grid.Column="0" Foreground="#ddd" Content="Contact name"/>
+                        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding ContactName}"/>
                         
-                        <Label Grid.Row="3" Grid.Column="0" Foreground="#ddd" Content="Address"/>
-                        <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding Address}"/>
+                        <Label Grid.Row="3" Grid.Column="0" Foreground="#ddd" Content="Contact title"/>
+                        <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding ContactTitle}"/>
+                        
+                        <Label Grid.Row="4" Grid.Column="0" Foreground="#ddd" Content="Address"/>
+                        <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding Address}"/>
 
-                        <Label Grid.Row="4" Grid.Column="0" Foreground="#ddd" Content="City"/>
-                        <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding City}"/>
+                        <Label Grid.Row="5" Grid.Column="0" Foreground="#ddd" Content="City"/>
+                        <TextBox Grid.Row="5" Grid.Column="1" Text="{Binding City}"/>
 
-                        <Label Grid.Row="5" Grid.Column="0" Foreground="#ddd" Content="Region"/>
-                        <TextBox Grid.Row="5" Grid.Column="1" Text="{Binding Region}"/>
+                        <Label Grid.Row="6" Grid.Column="0" Foreground="#ddd" Content="Region"/>
+                        <TextBox Grid.Row="6" Grid.Column="1" Text="{Binding Region}"/>
 
-                        <Label Grid.Row="6" Grid.Column="0" Foreground="#ddd" Content="Postal code"/>
-                        <TextBox Grid.Row="6" Grid.Column="1" Text="{Binding PostalCode}"/>
+                        <Label Grid.Row="7" Grid.Column="0" Foreground="#ddd" Content="Postal code"/>
+                        <TextBox Grid.Row="7" Grid.Column="1" Text="{Binding PostalCode}"/>
 
-                        <Label Grid.Row="7" Grid.Column="0" Foreground="#ddd" Content="Contry"/>
-                        <TextBox Grid.Row="7" Grid.Column="1" Text="{Binding Country}"/>
+                        <Label Grid.Row="8" Grid.Column="0" Foreground="#ddd" Content="Contry"/>
+                        <TextBox Grid.Row="8" Grid.Column="1" Text="{Binding Country}"/>
 
-                        <Label Grid.Row="8" Grid.Column="0" Foreground="#ddd" Content="Phone"/>
-                        <TextBox Grid.Row="8" Grid.Column="1" Text="{Binding Phone}"/>
+                        <Label Grid.Row="9" Grid.Column="0" Foreground="#ddd" Content="Phone"/>
+                        <TextBox Grid.Row="9" Grid.Column="1" Text="{Binding Phone}"/>
 
-                        <Label Grid.Row="9" Grid.Column="0" Foreground="#ddd" Content="Fax"/>
-                        <TextBox Grid.Row="9" Grid.Column="1" Text="{Binding Fax}"/>
+                        <Label Grid.Row="10" Grid.Column="0" Foreground="#ddd" Content="Fax"/>
+                        <TextBox Grid.Row="10" Grid.Column="1" Text="{Binding Fax}"/>
 
-                        <Button Grid.Row="11" Grid.ColumnSpan="2" Background="#444" Foreground="#ddd" Margin="0 10" Content="Add" Click="AddCustomer"/>
+                        <Button Grid.Row="12" Grid.ColumnSpan="2" Background="#444" Foreground="#ddd" Margin="0 10" Content="Add" Click="AddCustomer"/>
                     </Grid>
                 </StackPanel>
             </Border>
@@ -135,39 +139,43 @@
                             <RowDefinition/>
                             <RowDefinition/>
                             <RowDefinition/>
+                            <RowDefinition/>
                         </Grid.RowDefinitions>
 
-                        <Label Grid.Row="0" Grid.Column="0" Foreground="#ddd" Content="Name"/>
-                        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding CompanyName}"/>
+                        <Label Grid.Row="0" Grid.Column="0" Foreground="#ddd" Content="Customer Id"/>
+                        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding CustomerId}"/>
 
-                        <Label Grid.Row="1" Grid.Column="0" Foreground="#ddd" Content="Contact name"/>
-                        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding ContactName}"/>
+                        <Label Grid.Row="1" Grid.Column="0" Foreground="#ddd" Content="Name"/>
+                        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding CompanyName}"/>
 
-                        <Label Grid.Row="2" Grid.Column="0" Foreground="#ddd" Content="Contact title"/>
-                        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding ContactTitle}"/>
+                        <Label Grid.Row="2" Grid.Column="0" Foreground="#ddd" Content="Contact name"/>
+                        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding ContactName}"/>
 
-                        <Label Grid.Row="3" Grid.Column="0" Foreground="#ddd" Content="Address"/>
-                        <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding Address}"/>
+                        <Label Grid.Row="3" Grid.Column="0" Foreground="#ddd" Content="Contact title"/>
+                        <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding ContactTitle}"/>
 
-                        <Label Grid.Row="4" Grid.Column="0" Foreground="#ddd" Content="City"/>
-                        <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding City}"/>
+                        <Label Grid.Row="4" Grid.Column="0" Foreground="#ddd" Content="Address"/>
+                        <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding Address}"/>
 
-                        <Label Grid.Row="5" Grid.Column="0" Foreground="#ddd" Content="Region"/>
-                        <TextBox Grid.Row="5" Grid.Column="1" Text="{Binding Region}"/>
+                        <Label Grid.Row="5" Grid.Column="0" Foreground="#ddd" Content="City"/>
+                        <TextBox Grid.Row="5" Grid.Column="1" Text="{Binding City}"/>
 
-                        <Label Grid.Row="6" Grid.Column="0" Foreground="#ddd" Content="Postal code"/>
-                        <TextBox Grid.Row="6" Grid.Column="1" Text="{Binding PostalCode}"/>
+                        <Label Grid.Row="6" Grid.Column="0" Foreground="#ddd" Content="Region"/>
+                        <TextBox Grid.Row="6" Grid.Column="1" Text="{Binding Region}"/>
 
-                        <Label Grid.Row="7" Grid.Column="0" Foreground="#ddd" Content="Contry"/>
-                        <TextBox Grid.Row="7" Grid.Column="1" Text="{Binding Country}"/>
+                        <Label Grid.Row="7" Grid.Column="0" Foreground="#ddd" Content="Postal code"/>
+                        <TextBox Grid.Row="7" Grid.Column="1" Text="{Binding PostalCode}"/>
 
-                        <Label Grid.Row="8" Grid.Column="0" Foreground="#ddd" Content="Phone"/>
-                        <TextBox Grid.Row="8" Grid.Column="1" Text="{Binding Phone}"/>
+                        <Label Grid.Row="8" Grid.Column="0" Foreground="#ddd" Content="Contry"/>
+                        <TextBox Grid.Row="8" Grid.Column="1" Text="{Binding Country}"/>
 
-                        <Label Grid.Row="9" Grid.Column="0" Foreground="#ddd" Content="Fax"/>
-                        <TextBox Grid.Row="9" Grid.Column="1" Text="{Binding Fax}"/>
+                        <Label Grid.Row="9" Grid.Column="0" Foreground="#ddd" Content="Phone"/>
+                        <TextBox Grid.Row="9" Grid.Column="1" Text="{Binding Phone}"/>
 
-                        <Button Grid.Row="11" Grid.ColumnSpan="2" Background="#444" Foreground="#ddd" Margin="0 10" Content="Update" Click="UpdateCustomer"/>
+                        <Label Grid.Row="10" Grid.Column="0" Foreground="#ddd" Content="Fax"/>
+                        <TextBox Grid.Row="10" Grid.Column="1" Text="{Binding Fax}"/>
+
+                        <Button Grid.Row="12" Grid.ColumnSpan="2" Background="#444" Foreground="#ddd" Margin="0 10" Content="Update" Click="UpdateCustomer"/>
                     </Grid>
                 </StackPanel>
             </Border>

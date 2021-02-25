@@ -22,6 +22,10 @@ namespace DatabaseManagerApp
 
         NorthwindContext dbContext;
         Customer NewCustomer = new Customer();
+        /// <summary>
+        /// This class creates page containing customers
+        /// </summary>
+        /// <param name="dbContext"></param>
         public CustomersPage(NorthwindContext dbContext)
         {
             this.dbContext = dbContext;
