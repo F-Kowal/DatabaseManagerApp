@@ -37,7 +37,7 @@
                 <DataGridTemplateColumn Header="Update Employee">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="Edit" Click="UpdateEmployeeForEdit"/>
+                            <Button Background="#333" Foreground="#ddd" Cursor="Hand" Content="Edit" Click="UpdateEmployeeForEdit"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
@@ -45,7 +45,7 @@
                 <DataGridTemplateColumn Header="Delete Employee">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="Delete" Click="DeleteEmployee"/>
+                            <Button Background="#333" Foreground="#ddd" Cursor="Hand" Content="Delete" Click="DeleteEmployee"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
@@ -133,7 +133,7 @@
                         <Label Grid.Row="14" Grid.Column="0" Foreground="#ddd" Content="Reports to"/>
                         <TextBox Grid.Row="14" Grid.Column="1" Text="{Binding ReportsTo}"/>
 
-                        <Button Grid.Row="16" Grid.ColumnSpan="2" Background="#444" Foreground="#ddd" Margin="0 10" Content="Add" Click="AddEmployee"/>
+                        <Button Grid.Row="16" Grid.ColumnSpan="2" Cursor="Hand" Background="#444" Foreground="#ddd" Margin="0 10" Content="Add" Click="AddEmployee"/>
                     </Grid>
                 </StackPanel>
             </Border>
@@ -212,7 +212,7 @@
                         <Label Grid.Row="14" Grid.Column="0" Foreground="#ddd" Content="Reports to"/>
                         <TextBox Grid.Row="14" Grid.Column="1" Text="{Binding ReportsTo}"/>
 
-                        <Button Grid.Row="16" Grid.ColumnSpan="2" Background="#444" Foreground="#ddd" Margin="0 10" Content="Update" Click="UpdateEmployee"/>
+                        <Button Grid.Row="16" Grid.ColumnSpan="2" Cursor="Hand" Background="#444" Foreground="#ddd" Margin="0 10" Content="Update" Click="UpdateEmployee"/>
                     </Grid>
                 </StackPanel>
             </Border>

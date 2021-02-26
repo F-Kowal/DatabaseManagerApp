@@ -32,7 +32,7 @@
                 <DataGridTemplateColumn Header="Update Customer">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="Edit" Click="UpdateCustomerForEdit"/>
+                            <Button Background="#333" Foreground="#ddd" Cursor="Hand" Content="Edit" Click="UpdateCustomerForEdit"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
@@ -40,7 +40,7 @@
                 <DataGridTemplateColumn Header="Delete Customer">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="Delete" Click="DeleteCustomer"/>
+                            <Button Background="#333" Foreground="#ddd" Cursor="Hand" Content="Delete" Click="DeleteCustomer"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
@@ -112,7 +112,7 @@
                         <Label Grid.Row="10" Grid.Column="0" Foreground="#ddd" Content="Fax"/>
                         <TextBox Grid.Row="10" Grid.Column="1" Text="{Binding Fax}"/>
 
-                        <Button Grid.Row="12" Grid.ColumnSpan="2" Background="#444" Foreground="#ddd" Margin="0 10" Content="Add" Click="AddCustomer"/>
+                        <Button Grid.Row="12" Grid.ColumnSpan="2" Cursor="Hand" Background="#444" Foreground="#ddd" Margin="0 10" Content="Add" Click="AddCustomer"/>
                     </Grid>
                 </StackPanel>
             </Border>
@@ -175,12 +175,10 @@
                         <Label Grid.Row="10" Grid.Column="0" Foreground="#ddd" Content="Fax"/>
                         <TextBox Grid.Row="10" Grid.Column="1" Text="{Binding Fax}"/>
 
-                        <Button Grid.Row="12" Grid.ColumnSpan="2" Background="#444" Foreground="#ddd" Margin="0 10" Content="Update" Click="UpdateCustomer"/>
+                        <Button Grid.Row="12" Grid.ColumnSpan="2" Cursor="Hand" Background="#444" Foreground="#ddd" Margin="0 10" Content="Update" Click="UpdateCustomer"/>
                     </Grid>
                 </StackPanel>
             </Border>
-
-
         </Grid>
     </Grid>
 </Page>
