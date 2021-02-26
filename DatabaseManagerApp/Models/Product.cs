@@ -5,6 +5,9 @@ using System.Collections.Generic;
 
 namespace DatabaseManagerApp
 {
+    /// <summary>
+    /// A model for products
+    /// </summary>
     public partial class Product
     {
         public int ProductId { get; set; }

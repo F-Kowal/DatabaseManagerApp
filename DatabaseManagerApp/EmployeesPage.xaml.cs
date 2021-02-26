@@ -22,6 +22,10 @@ namespace DatabaseManagerApp
 
         NorthwindContext dbContext;
         Employee NewEmployee = new Employee();
+        /// <summary>
+        /// Constructor creating instance of EmployeesPage and it's components
+        /// </summary>
+        /// <param name="dbContext"></param>
         public EmployeesPage(NorthwindContext dbContext)
         {
             this.dbContext = dbContext;

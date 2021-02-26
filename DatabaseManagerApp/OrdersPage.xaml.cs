@@ -22,6 +22,10 @@ namespace DatabaseManagerApp
 
         NorthwindContext dbContext;
         Order NewOrder = new Order();
+        /// <summary>
+        /// Constructor creating instance of OrdersPage and it's components
+        /// </summary>
+        /// <param name="dbContext"></param>
         public OrdersPage(NorthwindContext dbContext)
         {
             this.dbContext = dbContext;

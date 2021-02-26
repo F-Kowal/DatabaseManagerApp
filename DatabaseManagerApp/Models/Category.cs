@@ -5,6 +5,9 @@ using System.Collections.Generic;
 
 namespace DatabaseManagerApp
 {
+    /// <summary>
+    /// A model for categories
+    /// </summary>
     public partial class Category
     {
         public Category()

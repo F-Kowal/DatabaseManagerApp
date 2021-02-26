@@ -22,6 +22,10 @@ namespace DatabaseManagerApp
 
         NorthwindContext dbContext;
         Product NewProduct = new Product();
+        /// <summary>
+        /// Constructor creating instance of ProductsPage and it's components
+        /// </summary>
+        /// <param name="dbContext"></param>
         public ProductsPage(NorthwindContext dbContext)
         {
             this.dbContext = dbContext;

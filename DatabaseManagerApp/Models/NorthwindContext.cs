@@ -12,18 +12,41 @@ namespace DatabaseManagerApp
         {
         }
 
+        /// <summary>
+        /// The main database context
+        /// </summary>
+        /// <param name="options"></param>
         public NorthwindContext(DbContextOptions<NorthwindContext> options)
             : base(options)
         {
             Database.EnsureCreated();
         }
 
+        /// <summary>
+        /// DbSet containing Categories
+        /// </summary>
         public virtual DbSet<Category> Categories { get; set; }
+        /// <summary>
+        /// DbSet containing Customers
+        /// </summary>
         public virtual DbSet<Customer> Customers { get; set; }
+        /// <summary>
+        /// DbSet containing Employees
+        /// </summary>
         public virtual DbSet<Employee> Employees { get; set; }
+        /// <summary>
+        /// DbSet containing Orders
+        /// </summary>
         public virtual DbSet<Order> Orders { get; set; }
+        /// <summary>
+        /// DbSet containing Products
+        /// </summary>
         public virtual DbSet<Product> Products { get; set; }
 
+        /// <summary>
+        /// Change sql connection string if necessary
+        /// </summary>
+        /// <param name="optionsBuilder"></param>
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)

@@ -5,6 +5,9 @@ using System.Collections.Generic;
 
 namespace DatabaseManagerApp
 {
+    /// <summary>
+    /// A model for employees
+    /// </summary>
     public partial class Employee
     {
         public Employee()

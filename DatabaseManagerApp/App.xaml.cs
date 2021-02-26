@@ -17,6 +17,10 @@ namespace DatabaseManagerApp
     {
         private readonly ServiceProvider serviceProvider;
 
+        /// <summary>
+        /// App constructor configuring services and adding database connection.
+        /// Change sql connection string if necessary
+        /// </summary>
         public App()
         {
             ServiceCollection services = new ServiceCollection();

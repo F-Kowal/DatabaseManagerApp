@@ -22,6 +22,10 @@ namespace DatabaseManagerApp
 
         NorthwindContext dbContext;
         Category NewCategory = new Category();
+        /// <summary>
+        /// Constructor creating instance of CategoriesPage and it's components
+        /// </summary>
+        /// <param name="dbContext"></param>
         public CategoriesPage(NorthwindContext dbContext)
         {
             this.dbContext = dbContext;
